@@ -52,6 +52,11 @@
   color: rgb(71 85 105);
 }
 
+.neon-text {
+  text-shadow: 0 0 10px rgba(19, 91, 236, 0.5);
+}
+
+
 /* Material Symbols */
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';

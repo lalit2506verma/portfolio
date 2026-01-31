@@ -6,15 +6,19 @@ interface NavItem {
   active?: boolean
 }
 
-const Navbar: React.FC = () => {
+interface HeaderProps {
+  activeTab: string
+}
+
+const Navbar: React.FC<HeaderProps> = ({activeTab = 'Architecture'}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems: NavItem[] = [
-    { label: "Arhitecture", url: "/", active:true },
-    { label: "Projects", url: "/projects" },
-    { label: "Logs", url: "/logs" },
-    { label: 'Contact', url: '#' }
-  ]
+    { label: "Architecture", url: "#", active: activeTab === "Architecture" },
+    { label: "Projects", url: "#", active: activeTab === "Projects" },
+    { label: "Logs", url: "#", active: activeTab === "Logs" },
+    { label: "Contact", url: "#", active: activeTab === "Contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 nav-glass transition-all duration-300">
@@ -22,7 +26,7 @@ const Navbar: React.FC = () => {
         {/* Logo and name */}
 
         <div className="flex items-center gap-2 lg:gap-3 group cursor-pointer">
-          <div className="size-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 group-hover-primary/50 transition-colors">
+          <div className="size-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 group-hover:border-primary/50 transition-colors">
             <span className="material-symbols-outlined text-2xl text-primary transition-colors">
               terminal
             </span>
@@ -34,7 +38,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Navigation */}
-        <div className="hidden md:flex justify-items-center md:gap-8 lg:gap-10">
+        <div className="hidden md:flex items-center md:gap-8 lg:gap-10">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -48,7 +52,7 @@ const Navbar: React.FC = () => {
 
         {/* Resume */}
         <button className="hidden md:flex items-center gap-2 px-5 py-2 ml-8 bg-white text-background-dark hover:bg-slate-200 transition-colors rounded text-sm font-bold">
-          <span>Resume_V2.pdf</span>
+          <span>Resume_v2.pdf</span>
           <span className="material-symbols-outlined">download</span>
         </button>
 
@@ -69,6 +73,7 @@ const Navbar: React.FC = () => {
               {navItems.map((item) => (
                 <a
                   key={item.label}
+                  href={item.url}
                   className={`${item.active ? 'text-white' : 'text-slate-400'} hover:text-primary transition-colors text-sm font-medium`}
                 >
                   {item.label}
@@ -76,7 +81,7 @@ const Navbar: React.FC = () => {
               ))}
               
               <button className="flex items-center gap-2 px-5 py-2 bg-white text-background-dark hover:bg-slate-200 transition-colors rounded text-sm font-bold justify-center">
-                <span>Resume_V2.pdf</span>
+                <span>Resume_v2.pdf</span>
                 <span className="material-symbols-outlined text-sm">download</span>
               </button>
             </nav>
