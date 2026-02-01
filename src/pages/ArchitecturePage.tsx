@@ -13,9 +13,9 @@ const ArchitecturePage = () => {
         <HeroSection />
         
         {/* Experience TimeLine and Skills Panel */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-20">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-20">
           <ExperienceTimeline />
-        </div>
+        </section>
 
       </div>
     </>

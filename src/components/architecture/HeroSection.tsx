@@ -35,14 +35,14 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <button className="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded font-medium transition-all shadow-[0_0_15px_rgba(19,91,236,0.3)] hover:shadow-[0_0_25px_rgba(19,91,236,0.5)] flex items-center gap-2">
                 <span>Execute Protocol</span>
-                <span className="material-symbols-outlined text-xs">
+                <span className="material-symbols-outlined text-sm!">
                   arrow_forward
                 </span>
               </button>
 
               <button className="border border-glass-border hover:bg-white/5 text-slate-300 px-6 py-3 rounded font-medium transition-all flex items-center gap-2">
                 <span>View Source</span>
-                <span className="material-symbols-outlined text-xs">code</span>
+                <span className="material-symbols-outlined text-sm!">code</span>
               </button>
             </div>
           </div>
