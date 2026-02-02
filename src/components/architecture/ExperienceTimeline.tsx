@@ -12,47 +12,46 @@ const ExperienceTimeline: React.FC = () => {
   const experiences: Experience[] = [
     {
       id: "1",
-      title: "Senior Software Engineer",
+      title: "Software Engineer",
       company: "HCL Technologies Ltd.",
       location: "Noida, India",
       isCurrent: true,
       isEducation: false,
-      version: "v3.0.1",
+      version: "v3.0.0",
       achievements: [
-        "Architected a real-time event streaming pipeline processing 10k+ events/sec using Kafka and Go.",
-        "Reduced database query latency by 45% through advanced PostgreSQL indexing and Redis caching layers.",
-        "Led the migration of legacy monolith to microservices on Kubernetes.",
+        "Worked on enterprise backend systems, focusing on stability, data flow reliability, and production issue resolution.",
+        "Performed system-level debugging and root-cause analysis to identify and prevent recurring backend issues.",
+        "Led NSRs and requirement analysis, translating business needs into technical changes and improving delivery timelines.",
       ],
     },
     {
       id: "2",
-      title: "Bachelor's Of Computer Application",
+      title: "Bachelor of Computer Applications (BCA)",
       company: "Amity University Online",
-      location: "",
+      location: "India",
       isCurrent: false,
       isEducation: true,
       version: "v2.0.0",
       achievements: [
-        "Architected a real-time event streaming pipeline processing 10k+ events/sec using Kafka and Go.",
-        "Reduced database query latency by 45% through advanced PostgreSQL indexing and Redis caching layers.",
-        "Led the migration of legacy monolith to microservices on Kubernetes.",
+        "Studied core CS subjects including Data Structures, OOP, DBMS, and Software Engineering.",
+        "Applied Java and SQL fundamentals through academic and practical projects.",
       ],
     },
     {
       id: "3",
-      title: "HCL Techbee Scholar",
+      title: "HCL TechBee Scholar",
       company: "HCL Training & Staffing",
       location: "Noida, India",
       isEducation: false,
       isCurrent: false,
       version: "v1.0.0",
       achievements: [
-        "Architected a real-time event streaming pipeline processing 10k+ events/sec using Kafka and Go.",
-        "Reduced database query latency by 45% through advanced PostgreSQL indexing and Redis caching layers.",
-        "Led the migration of legacy monolith to microservices on Kubernetes.",
+        "Completed structured industry training in Core Java, SQL, Web Development fundamentals, and software engineering practices.",
+        "Gained hands-on exposure to SDLC, Agile methodologies, enterprise workflows, and real-world problem-solving scenarios.",
       ],
     },
   ];
+
   return (
     <div className="lg:col-span-7 flex flex-col gap-8">
       <div className="flex items-center justify-between border-b-2 border-glass-border pb-4">

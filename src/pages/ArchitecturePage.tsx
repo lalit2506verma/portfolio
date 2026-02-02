@@ -1,5 +1,6 @@
 import ExperienceTimeline from "../components/architecture/ExperienceTimeline"
 import HeroSection from "../components/architecture/HeroSection"
+import SkillPanel from "../components/architecture/SkillPanel"
 import Navbar from "../components/navbar/Navbar"
 
 const ArchitecturePage = () => {
@@ -15,6 +16,7 @@ const ArchitecturePage = () => {
         {/* Experience TimeLine and Skills Panel */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-20">
           <ExperienceTimeline />
+          <SkillPanel/>
         </section>
 
       </div>
