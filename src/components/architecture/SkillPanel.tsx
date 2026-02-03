@@ -106,7 +106,7 @@ const SkillPanel: React.FC = () => {
           ))}
 
           {/* Status Card */}
-          <div className="mt-4 p-6 rounded-xl border border-primary relative overlow-hidden bg-linear-to-br from-primary/20 to-transparent">
+          <div className="mt-4 p-6 rounded-xl border border-primary/50 relative overlow-hidden bg-linear-to-br from-primary/20 to-transparent">
             <div className="relative z-10">
               <h4 className="text-white font-bold text-lg mb-2">
                 System Status

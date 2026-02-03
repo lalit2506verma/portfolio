@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface NavItem {
   label: string,
@@ -14,8 +15,8 @@ const Navbar: React.FC<HeaderProps> = ({activeTab = 'Architecture'}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems: NavItem[] = [
-    { label: "Architecture", url: "#", active: activeTab === "Architecture" },
-    { label: "Projects", url: "#", active: activeTab === "Projects" },
+    { label: "Architecture", url: "/", active: activeTab === "Architecture" },
+    { label: "Projects", url: "/projects", active: activeTab === "Projects" },
     { label: "Logs", url: "#", active: activeTab === "Logs" },
     { label: "Contact", url: "#", active: activeTab === "Contact" },
   ];
@@ -40,13 +41,13 @@ const Navbar: React.FC<HeaderProps> = ({activeTab = 'Architecture'}) => {
         {/* Navigation */}
         <div className="hidden md:flex items-center md:gap-8 lg:gap-10">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               className={`${item.active ? 'text-white hover:text-primary' : "text-slate-400 hover:text-primary"} transition-colors text-sm font-medium`}
-              href={item.url}
+              to={item.url}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -71,13 +72,13 @@ const Navbar: React.FC<HeaderProps> = ({activeTab = 'Architecture'}) => {
           <div className="absolute top-20 left-0 right-0 bg-background-dark border border-glass-border rounded-lg p-4 md:hidden mx-4">
             <nav className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.url}
+                  to={item.url}
                   className={`${item.active ? 'text-white' : 'text-slate-400'} hover:text-primary transition-colors text-sm font-medium`}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               
               <button className="flex items-center gap-2 px-5 py-2 bg-white text-background-dark hover:bg-slate-200 transition-colors rounded text-sm font-bold justify-center">
