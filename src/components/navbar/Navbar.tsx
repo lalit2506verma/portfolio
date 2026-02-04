@@ -17,8 +17,8 @@ const Navbar: React.FC<HeaderProps> = ({activeTab = 'Architecture'}) => {
   const navItems: NavItem[] = [
     { label: "Architecture", url: "/", active: activeTab === "Architecture" },
     { label: "Projects", url: "/projects", active: activeTab === "Projects" },
-    { label: "Logs", url: "#", active: activeTab === "Logs" },
-    { label: "Contact", url: "#", active: activeTab === "Contact" },
+    { label: "Logs", url: "/logs", active: activeTab === "Logs" },
+    { label: "Contact", url: "/contact-me", active: activeTab === "Contact" },
   ];
 
   return (

@@ -22,8 +22,6 @@ const ProjectsPage: React.FC = () => {
               </span>
             </a>
           </div>
-
-          
         </div>
       </div>
     </>
