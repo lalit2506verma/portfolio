@@ -5,6 +5,7 @@ import ArchitecturePage from "./pages/ArchitecturePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import LogsPage from "./pages/LogsPage";
 import ContactUsPage from "./pages/ContactUsPage";
+import FooterSection from "./components/footer/FooterSection";
 
 const App: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ const App: React.FC = () => {
         </main>
 
         {/* Footer */}
-
+        <FooterSection/>
       </div>
     </>
   );

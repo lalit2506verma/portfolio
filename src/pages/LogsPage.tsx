@@ -50,7 +50,7 @@ const LogsPage = () => {
               </div>
 
               <div className="space-y-6 relative ml-1">
-                <div className="absolute left-1 top-2 bottom-2 w-px bg-gradient-to-b from-slate-700 via-slate-800 to-transparent"></div>
+                <div className="absolute left-1 top-2 bottom-2 w-px bg-linear-to-b from-slate-700 via-slate-800 to-transparent"></div>
                 {gitHubEvent.map((gitEvent, idx) => (
                   <div key={ idx} className="relative pl-6 group">
                     <div className="absolute left-0 top-1.5 w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_10px_rgba(19,91,236,0.8)] border border-background-dark z-10 group-hover:scale-110 transition-transform"></div>
